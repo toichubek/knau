@@ -1,0 +1,62 @@
+@media only screen and (max-width : 1200px) {
+	.contacts span {
+    font-size: 21px;
+	}
+	.nav>li>a {
+	    padding: 15px 13px;
+	}
+	a.green-box {
+    font-size: 24px;
+	}
+
+}
+
+@media only screen and (max-width : 992px) {
+	.title {
+    padding: 8px;
+}
+	.lang, .social,	.social a{
+		float: none;
+	}
+	.social {
+	    margin: 5px 0;
+	}
+	.social a{
+		margin: 0 4px 0 0;
+	}
+section.main{
+	font-size: 26px;
+}
+.partners-caption .middle {
+    padding-left: 27px;
+}
+.wrap-contacts {
+    margin: 15px;
+}
+.vid {
+height:150px;
+width: 200px
+padding:7px
+}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.news-list {
+	    margin-top: 15px;
+	}
+}
+@media (max-width: 480px) {
+	.title h1,
+	.contacts a,
+	.contacts span,
+	a, a:focus{
+		font-size: 17px;
+	}
+	.logo img {
+    width: 75%;
+}
+a.partners-box{
+	font-size: 14px;
+}
+
+}

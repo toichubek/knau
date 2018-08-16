@@ -1,0 +1,185 @@
+@import 'bootstrap.min.css';
+@import 'reset.css';
+@import 'font-awesome.min.css';
+@import 'fonts.css';
+html,body{height:100%}
+body{font-family:'Palatino Linotype',sans-serif;min-width:320px}
+
+p,a,li{font-size:16px}
+img{max-width:100%}
+strong{font-weight:700}
+em{font-style:italic}
+.navbar-inverse a,.navbar-inverse a:focus{text-decoration:none;font-size:15px}
+a:hover{color:#ecf0f1;text-decoration:none}
+a,a:focus,.title h1,header,section.main,footer,.btn,.btn:focus,.btn:hover{color:#fff;outline:none;text-decoration:none}
+.navbar,.btn{border-radius:0;margin-bottom:0}
+.navbar-default, btn{background-color:#044773}
+.logo-wrap{float:left;padding:5px 0}
+.logo{display:inline-block}
+.logo {vertical-align:middle}
+.title{overflow:hidden;padding:14px}
+.title h1{font-size:22px;max-width:500px}
+.contacts .fa{font-size:16px;padding-right:10px}
+.contacts,.paragraph{padding:13px 0}
+.contacts a{display:inline-block;font-size:20px;line-height:1.6em}
+.contacts span{font-weight:700;font-size:22px}
+.lang,.social{float:right}
+.lang li{float:right}
+.social{margin:15px 0}
+.social a{float:right;margin-left:15px; padding-right:8px}
+.social .fa{font-size:30px}
+a.box{display:block;height:60px;background: #2980b9;border-bottom:7px solid #1a6ba0;position:relative;font-size:30px}
+a.boxmain{display:block;height:60px;background: #2980b9;border-bottom:7px solid #1a6ba0;position:relative;font-size:30px}
+.item,.news-item{margin-bottom:5px;overflow:hidden}
+a.box:hover{color:#fff;background-color:#3498db}
+.top-icon{position:absolute;top:10px;left:15px}
+.icon-bottom{position:absolute;bottom:10px;right:15px}
+.caption{height:100px;display:table;width:100%}
+.middle{vertical-align:middle;display:table-cell;padding:0 10px}
+.navbar-inverse,.navbar-default{border:none}
+.navbar-inverse,a.box:active{background-color:#061d44}
+.navbar-nav{margin:0}
+.navbar-inverse .navbar-nav>li>a{color:#fff;text-transform:uppercase}
+.navbar-nav a.active,.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover,.dropdown-menu p{background-color:#155c8b}
+.dropdown-menu{border:none;padding:0;background-color:#1a6ba0;width:250px}
+.dropdown-menu p{color:#fff;padding:10px;border-bottom:1px solid #155c8b}
+.dropdown-menu>li>a,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a{padding:7px 7px 7px 20px;color:#fff;font-size:17px;white-space:normal;line-height:1.1em;border-bottom:1px solid #155c8b}
+.dropdown-menu > li > a:focus,.dropdown-menu > li > a:hover,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover{color:#fff;background-color:#155c8b}
+.nav>li>a{padding:15px 15px}
+.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover{background-color:transparent}
+.navbar-inverse .navbar-toggle{border-color:#fff}
+.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form, .{border:none}
+section.main{background:url(/static/back.png) center / cover no-repeat fixed #2980b9;font-size:34px;text-transform:uppercase;line-height:1.8em;position:relative;z-index:0}
+section.main:before{content:'';position:absolute;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(37,40,38,.5);z-index:-1}
+.jumbotron{padding-top:70px;background:none}
+.jumbotron h2{font-family:'PTSansBold',sans-serif}
+.wrap-send{margin:35px 0 60px}
+.send{padding:10px 20px;text-transform:uppercase;background-color:#1abc9c;border-bottom:4px solid #16a085;letter-spacing:.8px}
+.send:hover{background-color:#10cca6;color:#fff}
+.send:active{background-color:#16a085}
+.modal-body label{display:block;margin-bottom:7px;font-size:14px}
+.modal-footer{text-align:center}
+button.close{font-size:25px}
+.pagewrap{margin:30px 0}
+aside a.small-boxmain{height:85px;font-size:26px;color:#fff;border-bottom:5px solid #044773}
+a .inner-captionmain{height:80px;display:table;width:100%}
+
+aside a.small-box{height:35.5px;font-size:15px;color:#fff;border-bottom:1px solid #044773}
+a .inner-caption{height:33px;display:table;width:100%}
+
+.item a.partners-box{display:block;height:110px;color:#252a24;border:1px solid #ecf0f1;border-bottom:4px solid #ecf0f1}
+.mf{background:url(/static/logo-mf.png) 4% 50% no-repeat}
+a.partners-box:hover{background-color:#ecf0f1}
+.partners-caption{display:table;height:110px;padding:10px 10px 10px 85px}
+.pagewrap a{color:#1a6ba0}
+.content a:hover{color:#2980b9;text-decoration:underline}
+.title-news{display:inline-block;font-weight:700}
+.kafedra-link{display:inline-block;font-weight:700;font-size:26px;margin:45px;text-align:center}
+.news-date{color:#6f777b;font-size:16px;margin:18px 0 5px}
+.news-date .fa{margin-right:7px}
+.news-item{border-bottom:1px solid #ecf0f1;padding-bottom:18px}
+.headline{font-size:20px;color:#155c8b;text-transform:uppercase;font-weight:700;line-height:1.3em;margin-bottom:10px}
+.news-img{overflow:hidden}
+.news-img a img:hover{transform:scale(1.1);-ms-transform:scale(1.1);-moz-transform:scale(1.1);-webkit-transform:scale(1.1);-o-transform:scale(1.1)}
+a,button,.news-img a img{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-ms-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear}
+.preview-text{margin-bottom:10px}
+.content .all-news a{border:1px solid #ecf0f1;padding:5px 25px}
+.content .all-news a:hover{text-decoration:none;border:1px solid #2980b9}
+.all-news{margin:10px 0 30px}
+.pd{padding-right:2px;padding-left:2px}
+article p{margin:10px 0; line-height: 1.1;}
+.list>li{padding:0 0 0 20px;background:url(arrow2.png) no-repeat 0 2px;margin:10px 0 0}
+.arrow{padding:0 0 0 20px;background:url(arrow3.png) no-repeat 0 3px}
+.content .contacts .fa{color:#1a6ba0}
+.tab-content,.kurs-list{margin:15px 0;cursor:pointer}
+.team .media-heading,.heading{font-size:20px;font-weight:700;margin-bottom:15px}
+.ind{padding:0 0 0 15px}
+.text-lead p{font-size:20px}
+.courses{min-height:600px}
+footer{background-color:#044773;padding:30px 0 0;}
+footer i.fa{letter-spacing:10px}
+footer a i.fa{font-size:32px}
+.wrap-contacts p:nth-child(2){padding-left:19px}
+.copy p{font-size:14px;border-top:1px solid #fff;padding:5px 0;margin-top:30px}
+
+.gallery{margin:15px 0;background-color:#f5f5f5}
+.breadcrumb{border-radius:0}
+.img-wrap{margin:20px 0;overflow:hidden}
+img.media-object{max-width:150px}
+.video{height:0;position:relative;padding-bottom:63%}
+.video iframe{position:absolute;left:0;top:0;width:100%;height:100%}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #2980b9;
+    border-color: #061d44;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #061d44;
+    border-color: #061d44;
+}
+.btn {
+    display: inline-block;
+    padding: 14px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0px solid transparent;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+.subheadline {
+    font-size: 15px;
+    color: #155c8b;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+
+
+.lang input.active,.lang input:focus,.lang input:hover{background-color:#044773;color:#044773;text-decoration:none}
+
+.lang form{display:inline-block;font-size:16px;vertical-align:top;padding:5px;color:#fff}
+.lang form.active,.lang form:focus,.lang form:hover{background-color:#044773;color:#2980b9;text-decoration:none}
+
+.lang input[type=submit] {
+    background-color: #044773;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    display:inline-block;
+    font-size:16px;
+    vertical-align:top;
+    padding:5px;
+    color:#fff
+}
+
+img.imggallery{height:140px; width:137px; padding:5px; }
+
+.vid {height:150px; padding:7px}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse
+.navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>
+.active>a:hover {
+color: #fff;
+background-color: #044773;
+}

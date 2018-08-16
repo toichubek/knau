@@ -1,0 +1,29 @@
+{%extends "glavnaya/veterinaria.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Видео галерея"  %}</h3></div>
+    <div class="row">
+        <div class="col-md-12">
+            {% regroup videos by album as album_list_by_name %}
+            {% for one_album in album_list_by_name %}
+            {% if one_album.grouper.is_visible %}
+            {% if LANGUAGE_CODE == 'kg'  %}
+            <div class="subheadline"><h5>{{one_album.grouper.name_kg}} </h5></div>
+            {% else %}
+            <div class="subheadline"><h5>{{one_album.grouper.name}} </h5></div>
+            {% endif %}
+            <hr>
+            {% for person in one_album.list %}
+            <video class="col-md-4 vid"  playsinline controls>
+                <source src="{{person.video.url}}" type="video/mp4">
+            </video>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{%extends "glavnaya/students.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Документы"  %}</h3></div>
+    <hr>
+    <br>
+    {% for doc in docs %}
+    <li>
+        <a href="{{ doc.file.url }}" target="_blank">{{ doc.name }}</a>
+        <br>
+        <br>
+    </li>
+    {% endfor %}
+</div>
+
+{% endblock %}

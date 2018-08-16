@@ -1,0 +1,17 @@
+{%extends "glavnaya/students.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<article>
+    {% if LANGUAGE_CODE == 'kg'  %}
+    <div class="headline"><h3>  {{ stud_item.title_kg}} </h3></div>
+    <hr>
+    <div class="paragraph"><p>{{stud_item.text_kg|safe|linebreaks}}</p><br></div>
+    {% else %}
+    <div class="headline"><h3>  {{ stud_item.title}} </h3></div>
+    <hr>
+    <div class="paragraph"><p>{{stud_item.text|safe|linebreaks}}</p><br></div>
+    {% endif %}
+</article>
+{% endblock %}

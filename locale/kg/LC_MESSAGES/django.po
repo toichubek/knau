@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-16 16:33+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\abiturents\templates\abiturents\documents.html:7
+#: .\glavnaya\templates\glavnaya\abiturents.html:14
+#: .\glavnaya\templates\glavnaya\students.html:12
+#: .\students\templates\students\doc_students.html:6
+msgid "Документы"
+msgstr "Документтер"
+
+#: .\fakultet\templates\fakultet\department.html:17
+#: .\fakultet\templates\fakultet\departments.html:12
+#: .\fakultet\templates\fakultet\fakultet_side.html:11
+#: .\glavnaya\templates\glavnaya\base.html:106
+#: .\glavnaya\templates\glavnaya\fakultet.html:29
+#: .\glavnaya\templates\glavnaya\new.html:31
+#: .\glavnaya\templates\glavnaya\news.html:30
+msgid "Кафедры"
+msgstr "Кафедралар"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:8
+#: .\fakultet\templates\fakultet\istoria.html:13
+#: .\glavnaya\templates\glavnaya\base.html:103
+#: .\glavnaya\templates\glavnaya\fakultet.html:14
+#: .\glavnaya\templates\glavnaya\new.html:16
+#: .\glavnaya\templates\glavnaya\news.html:15
+msgid "История"
+msgstr "Тарыхы"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:9
+#: .\fakultet\templates\fakultet\management.html:10
+#: .\glavnaya\templates\glavnaya\base.html:104
+#: .\glavnaya\templates\glavnaya\fakultet.html:19
+#: .\glavnaya\templates\glavnaya\new.html:21
+#: .\glavnaya\templates\glavnaya\news.html:20
+msgid "Руководство"
+msgstr "Жетекчилер"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:10
+#: .\glavnaya\templates\glavnaya\base.html:105
+#: .\glavnaya\templates\glavnaya\fakultet.html:24
+#: .\glavnaya\templates\glavnaya\new.html:26
+#: .\glavnaya\templates\glavnaya\news.html:25
+msgid "Структура"
+msgstr "Курамы"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:12
+#: .\glavnaya\templates\glavnaya\base.html:107
+#: .\glavnaya\templates\glavnaya\fakultet.html:34
+#: .\glavnaya\templates\glavnaya\new.html:36
+#: .\glavnaya\templates\glavnaya\news.html:35
+msgid "Сотрудники"
+msgstr "Кызматкерлер"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:13
+#: .\glavnaya\templates\glavnaya\base.html:109
+#: .\glavnaya\templates\glavnaya\base.html:118
+#: .\glavnaya\templates\glavnaya\fakultet.html:46
+#: .\glavnaya\templates\glavnaya\new.html:48
+#: .\glavnaya\templates\glavnaya\new.html:74
+#: .\glavnaya\templates\glavnaya\news.html:47
+#: .\glavnaya\templates\glavnaya\news.html:71
+msgid "Новости"
+msgstr "Жаңылыктар"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:14
+#: .\fakultet\templates\fakultet\gallery.html:12
+#: .\glavnaya\templates\glavnaya\base.html:110
+#: .\glavnaya\templates\glavnaya\fakultet.html:51
+#: .\glavnaya\templates\glavnaya\new.html:53
+#: .\glavnaya\templates\glavnaya\news.html:52
+msgid "Галерея"
+msgstr "Фотожыйнак"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:15
+#: .\glavnaya\templates\glavnaya\base.html:111
+#: .\glavnaya\templates\glavnaya\base.html:124
+#: .\glavnaya\templates\glavnaya\fakultet.html:56
+#: .\glavnaya\templates\glavnaya\new.html:58
+#: .\glavnaya\templates\glavnaya\news.html:57
+msgid "Библиотека"
+msgstr "Китепкана"
+
+#: .\fakultet\templates\fakultet\fakultet_side.html:16
+#: .\glavnaya\templates\glavnaya\base.html:112
+#: .\glavnaya\templates\glavnaya\base.html:128
+#: .\glavnaya\templates\glavnaya\contacts.html:28
+#: .\glavnaya\templates\glavnaya\fakultet.html:61
+#: .\glavnaya\templates\glavnaya\new.html:63
+#: .\glavnaya\templates\glavnaya\news.html:62
+msgid "Контакты"
+msgstr "Байланыштар"
+
+#: .\fakultet\templates\fakultet\sotrudnik.html:10
+msgid "Сотрудники факультета"
+msgstr "Факультеттин кызматкерлери"
+
+#: .\fakultet\templates\fakultet\team.html:10
+msgid "Состав факультета"
+msgstr "Факультеттин курамы"
+
+#: .\glavnaya\templates\glavnaya\abiturents.html:56
+msgid "Абитурентам"
+msgstr "Абитуренттерге"
+
+#: .\glavnaya\templates\glavnaya\base.html:31
+#: .\glavnaya\templates\glavnaya\base.html:181
+#: .\glavnaya\templates\glavnaya\index.html:5
+msgid "Факультет ветеринарной медицины и биотехнологии КНАУ им. К.И.Скрябина"
+msgstr ""
+"Ветеринардык медицина жана биотехнология факультети К.И.Скрябин атындагы КМАУ"
+
+#: .\glavnaya\templates\glavnaya\base.html:94
+msgid "Ветеринария"
+msgstr "Ветеринария"
+
+#: .\glavnaya\templates\glavnaya\base.html:97
+msgid "О факультете"
+msgstr "Факультет"
+
+#: .\glavnaya\templates\glavnaya\base.html:108
+msgid "Учебный план"
+msgstr "Окуу планы"
+
+#: .\glavnaya\templates\glavnaya\base.html:120
+msgid "Студент"
+msgstr "Студент"
+
+#: .\glavnaya\templates\glavnaya\base.html:122
+msgid "Абитуриент"
+msgstr "Абитуриент"
+
+#: .\glavnaya\templates\glavnaya\base.html:126
+#, fuzzy
+#| msgid "Вопросы и ответы"
+msgid "Вопрос-Ответ"
+msgstr "Суроо-жооп"
+
+#: .\glavnaya\templates\glavnaya\fakultet.html:40
+#: .\glavnaya\templates\glavnaya\new.html:42
+#: .\glavnaya\templates\glavnaya\news.html:41
+msgid "Учебные планы"
+msgstr "Окуу пландар"
+
+#: .\glavnaya\templates\glavnaya\faq.html:28
+msgid "Вопросы и ответы"
+msgstr "Суроо-жооп"
+
+#: .\glavnaya\templates\glavnaya\news.html:98
+msgid "Подробнее..."
+msgstr "Толугураак маалымат..."
+
+#: .\glavnaya\templates\glavnaya\veterinaria.html:39
+msgid "Видео"
+msgstr "Видео"
+
+#: .\uc_sentr\settings.py:136
+msgid "Russian"
+msgstr "Орус"
+
+#: .\uc_sentr\settings.py:137
+msgid "Kyrgyz"
+msgstr "Кыргыз"
+
+#: .\veterinaria\templates\veterinaria\video.html:6
+#, fuzzy
+#| msgid "Галерея"
+msgid "Видео галерея"
+msgstr "Видео жыйнак"
+
+#~ msgid "Общежитие"
+#~ msgstr "Жатакана"
+
+#~ msgid "Стоимость обучения"
+#~ msgstr "Контракт"
+
+#~ msgid "Правила приема"
+#~ msgstr "Кабыл алуу"
+
+#~ msgid "Специальности"
+#~ msgstr "Кесиптер"
+
+#~ msgid "Студенческая жизнь"
+#~ msgstr "Студенттик жашоо"
+
+#~ msgid "Электронная библиотека"
+#~ msgstr "Электрондук китепкана"
+
+#~ msgid "Студенту"
+#~ msgstr "Студентке"
+
+#~ msgid "Абитуриенту"
+#~ msgstr "Абитуриентке"
+
+#~ msgid ""
+#~ "\n"
+#~ "             <h2> Факультет ветеринарной медицины  </h2>\n"
+#~ "             <h2>и биотехнологии КНАУ им. </h2>\n"
+#~ "             <h2>К.И.Скрябина</h2>\n"
+#~ "           "
+#~ msgstr ""
+#~ "\n"
+#~ "             <h2>  Ветеринардык медицина жана  </h2>\n"
+#~ "             <h2>биотехнология факультети К.И.Скрябин </h2>\n"
+#~ "             <h2>атындагы КМАУ</h2>\n"
+#~ "           "
+
+#~ msgid "Главные новости"
+#~ msgstr "Башкы жаңылыктар"
+
+#~ msgid "Все новости"
+#~ msgstr "Бардык жаңылыктар"
+
+#~ msgid "Академическая успеваемость"
+#~ msgstr "Академикалык жетишкендиктери"
+
+#~ msgid "Образовательный стандарт"
+#~ msgstr "Окуу стандарты"
+
+#~ msgid "График"
+#~ msgstr "График"
+
+#~ msgid "УМК"
+#~ msgstr "УМК"
+
+#, fuzzy
+#~| msgid "Студенческая жизнь"
+#~ msgid "Методические указания"
+#~ msgstr "Студенттик жашоо"
+
+#, fuzzy
+#~| msgid "Учебный план"
+#~ msgid "Учебники"
+#~ msgstr "Окуу планы"
+
+#~ msgid "Главная"
+#~ msgstr "Башкы бет"

@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'PTSans';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/otf/PTSans-Regular.otf'),
+		url('../fonts/ttf/pt_sans-web-regular-webfont.ttf'),
+		url('../fonts//eot/pt_sans-web-regular-webfont.eot'),
+		url('../fonts/svg/pt_sans-web-regular-webfont.svg'),
+		url('../fonts/woff/pt_sans-web-regular-webfont.woff'),
+		url('../fonts/woff2/pt_sans-web-regular-webfont.woff2');
+}
+@font-face {
+	font-family: 'PTSans';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../fonts/otf/PTSans-Italic.otf'),
+		url('../fonts/ttf/pt_sans-web-italic-webfont.ttf'),
+		url('../fonts//eot/pt_sans-web-italic-webfont.eot'),
+		url('../fonts/svg/pt_sans-web-italic-webfont.svg'),
+		url('../fonts/woff/pt_sans-web-italic-webfont.woff'),
+		url('../fonts/woff2/pt_sans-web-italic-webfont.woff2');
+}
+@font-face {
+	font-family: 'PTSans';
+	font-weight: 700;
+	font-style: bold;
+	src: url('../fonts/otf//PTSans-Bold.otf'),
+		url('../fonts/ttf/pt_sans-web-bold-webfont.ttf'),
+		url('../fonts//eot/pt_sans-web-bold-webfont.eot'),
+		url('../fonts/svg/pt_sans-web-bold-webfont.svg'),
+		url('../fonts/woff/pt_sans-web-bold-webfont.woff'),
+		url('../fonts/woff2/pt_sans-web-bold-webfont.woff2');
+}
+@font-face {
+	font-family: 'PTSans';
+	font-weight: 700;
+	font-style: italic;
+	src: url('../fonts/otf/PTSans-BoldItalic.otf'),
+		url('../fonts/ttf/pt_sans-web-bolditalic-webfont.ttf'),
+		url('../fonts//eot/pt_sans-web-bolditalic-webfont.eot'),
+		url('../fonts/svg/pt_sans-web-bolditalic-webfont.svg'),
+		url('../fonts/woff/pt_sans-web-bolditalic-webfont.woff'),
+		url('../fonts/woff2/pt_sans-web-bolditalic-webfont.woff2');
+}
