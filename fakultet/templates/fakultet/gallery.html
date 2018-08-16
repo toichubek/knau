@@ -1,0 +1,37 @@
+{%extends "glavnaya/fakultet.html" %}
+
+{% block meta %}
+{% load i18n %}
+<base href="/">
+<link rel="stylesheet" href="static/lightbox.css">
+<script src="static/lightbox-plus-jquery.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Галерея"  %}</h3></div>
+    <div class="row">
+        <div class="col-md-12">
+            {% regroup image by album as album_list_by_name %}
+            {% for one_album in album_list_by_name %}
+            {% if one_album.grouper.is_visible %}
+            {% if LANGUAGE_CODE == 'kg'  %}
+            <div class="subheadline"><h5>{{one_album.grouper.name_kg}} </h5></div>
+            {% else %}
+            <div class="subheadline"><h5>{{one_album.grouper.name}} </h5></div>
+            {% endif %}
+            <hr>
+            <div class="news-img">
+                {% for person in one_album.list %}
+                <a href="{{person.image.url}}" data-lightbox="mygallery">
+                    <img class="imggallery" src={{person.image.url}} alt={{person.name|truncatewords_html:3}}>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

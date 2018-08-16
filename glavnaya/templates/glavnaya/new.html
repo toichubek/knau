@@ -1,0 +1,96 @@
+{%extends "glavnaya/index.html" %}
+{% load i18n %}
+
+{% block bodyheader %}
+
+{% endblock %}
+
+{% block aside %}
+<div class="col-md-3"></div>
+<div class="col-md-7">
+    <div class="item">
+        <a href="fakultet/istoria.html" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "История"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="fakultet/management.html" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Руководство"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="fakultet/team.html" class="box small-box">
+        <div class="inner-caption"><h5 class="middle text-center">{% trans "Структура"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="fakultet/departments.html" class="box small-box">
+        <div class="inner-caption"><h5 class="middle text-center">{% trans "Кафедры"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="fakultet/sotrudnik.html" class="box small-box">
+        <div class="inner-caption"><h5 class="middle text-center">{% trans "Сотрудники"  %}</h5></div>
+        </a>
+    </div>
+
+    <div class="item">
+        <a target="_blank"  href="http://avn.knau.kg/ReportServer/Pages/ReportViewer.aspx?%2fVUZ%2fs_uch_plan_spets_veterenarnyi&rs:Command=Render" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Учебные планы"  %}</h5></div>
+        </a>
+    </div>
+
+    <div class="item">
+        <a href="news/" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Новости"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="fakultet/gallery.html" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Галерея"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="/students/library/" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Библиотека"  %}</h5></div>
+        </a>
+    </div>
+    <div class="item">
+        <a href="contacts.html" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Контакты"  %}</h5></div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+{% block content %}
+<div class="content">
+    <ol class="breadcrumb">
+        <li><a href="{% url 'departments' %}"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="{% url 'news' %}">{% trans "Новости"  %}</a></li>
+        <li class="active">
+            {% block news_title %}
+            {% if LANGUAGE_CODE == 'kg'  %}
+            {{new.title_kg|truncatewords_html:4}}
+            {% else %}
+            {{new.title|truncatewords_html:4}}
+            {% endif %}
+            {% endblock %}
+        </li>
+    </ol>
+
+    <article>
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <div class="headline"><h3>  {{ new.title_kg}} </h3></div>
+        <div class="paragraph"><p>{{new.text_kg|safe|linebreaks}}</p><br></div>
+        {% else %}
+        <div class="headline"><h3>  {{ new.title}} </h3></div>
+        <div class="paragraph"><p>{{new.text|safe|linebreaks}}</p><br></div>
+        {% endif %}
+    </article>
+</div>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

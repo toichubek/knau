@@ -1,0 +1,19 @@
+{%extends "glavnaya/fakultet.html" %}
+{% load i18n %}
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans   "История" %}</h3></div>
+    <hr>
+    <br>
+    <article>
+        {% for text in post %}
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <p> {{ text.text_kg|safe|linebreaks }}</p>
+        {% else %}
+        <p> {{ text.text_ru|safe|linebreaks }}</p>
+        {% endif %}
+        {% endfor %}
+    </article>
+</div>
+{% endblock %}

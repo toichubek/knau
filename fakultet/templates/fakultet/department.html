@@ -1,0 +1,38 @@
+{%extends "glavnaya/fakultet.html" %}
+{% load i18n %}
+{% block content %}
+<div class="content">
+    <ol class="breadcrumb">
+        <li><a href="index.html"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="fakultet/departments.html">{% trans "Кафедры"  %}</a></li>
+        <li class="active">
+            {% block news_title %}
+            {% if LANGUAGE_CODE == 'kg'  %}
+            {{department.name_kg|truncatewords_html:7}}
+            {% else %}
+            {{department.name|truncatewords_html:7}}
+            {% endif %}
+            {% endblock %}
+        </li>
+    </ol>
+    <article>
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <div class="headline"><h3>  {{department.name_kg}} </h3></div>
+        <div class="paragraph">
+            <p>{{department.about_kg|safe|linebreaks}}</p><br>
+        </div>
+        {% else %}
+        <div class="headline"><h3>  {{department.name}} </h3></div>
+        <div class="paragraph">
+            <p>{{department.about|safe|linebreaks}}</p><br>
+        </div>
+        {% endif %}
+    </article>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

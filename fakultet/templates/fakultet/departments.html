@@ -1,0 +1,23 @@
+{%extends "glavnaya/fakultet.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Кафедры"  %}</h3></div>
+    {%  for department in departments_all %}
+    <div class="row">
+        <hr>
+        <div class="col-md-4 news-img">
+            <img  src={{department.image.url}} alt={{department.name|truncatewords_html:3}}>
+        </div>
+        <div class="col-md-8" >
+            {% if LANGUAGE_CODE == 'kg'  %}
+            <h2 align="center"><a href="{% url 'department' department.id %}" class="kafedra-link">{{department.name_kg}}</a></h2>
+            {% else %}
+            <h2 align="center"><a href="{% url 'department' department.id %}" class="kafedra-link">{{department.name}}</a></h2>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

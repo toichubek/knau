@@ -1,0 +1,54 @@
+{%extends "glavnaya/index.html" %}
+{% load i18n %}
+
+{% block head %}
+{% endblock %}
+
+{% block aside %}
+<div class="col-md-1"></div>
+<div class="col-md-9">
+    <div class="item">
+        <a href="abiturents/documents.html" class="box small-box">
+            <div class="inner-caption"><h5 class="middle text-center">{% trans "Документы"  %}</h5></div>
+        </a>
+    </div>
+
+    {% for item in abit_list %}
+    <div class="item">
+        <a href="{% url 'abit_item' item.id %}"  class="box small-box">
+            {% if LANGUAGE_CODE == 'kg'  %}
+            <div class="inner-caption"><h5 class="middle text-center">{{ item.title_kg }}</h5></div>
+            {% else %}
+            <div class="inner-caption"><h5 class="middle text-center">{{ item.title }}</h5></div>
+            {% endif %}
+        </a>
+    </div>
+    {% endfor %}
+
+    {% for item in silka_list %}
+    <div class="item">
+        <a href="{{  item.url  }}" {% if item.new_tab %} target="_blank" {% endif %} class="box small-box">
+            {% if LANGUAGE_CODE == 'kg'  %}
+            <div class="inner-caption"><h5 class="middle text-center">{{  item.title_kg }}</h5></div>
+            {% else %}
+            <div class="inner-caption"><h5 class="middle text-center">{{  item.title }}</h5></div>
+            {% endif %}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Абитурентам"  %}</h3></div>
+    <hr>
+    <br>
+    <article>
+        {% for text in abiturent_info %}
+        <p> {{ text.text|safe|linebreaks }}</p>
+        {% endfor %}
+    </article>
+</div>
+{% endblock %}

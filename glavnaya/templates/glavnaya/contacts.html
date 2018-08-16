@@ -1,0 +1,41 @@
+{%extends "glavnaya/index.html" %}
+{% load i18n %}
+
+{% block aside %}
+
+{% for item in silka_list %}
+<div class="item">
+    <a href="{{  item.url  }}" {% if item.new_tab %} target="_blank" {% endif %} class="box small-box">
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <div class="inner-caption"><h5 class="middle text-center">{{  item.title_kg }}</h5></div>
+        {% else %}
+        <div class="inner-caption"><h5 class="middle text-center">{{  item.title }}</h5></div>
+        {% endif %}
+    </a>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Контакты"  %}</h3></div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="contacts">
+                {%  for address in ADDRESS %}
+                {% if LANGUAGE_CODE == 'kg'  %}
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ address.gorod_kg}}, {{ address.strana_kg }}. {{ address.ulitsa_kg }}</p>
+                {% else %}
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ address.gorod}}, {{ address.strana }}. {{ address.ulitsa }}</p>
+                {% endif %}
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{ address.telephone }}</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i>{{ address.email }}</p>
+                <br></br>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <script type="text/javascript" charset="utf-8" async src={{ address.api }} ></script>
+        </div>
+        {% endfor %}
+{% endblock %}

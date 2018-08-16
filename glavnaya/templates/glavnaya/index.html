@@ -1,0 +1,33 @@
+{% extends "glavnaya/base.html" %}
+                  {% load i18n %}
+
+{% block title %}
+{% trans "Факультет ветеринарной медицины и биотехнологии КНАУ им. К.И.Скрябина"  %}
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block header %}{% endblock %}
+
+ {% block bodyheader %}{% endblock %}
+
+{% block body %}
+<section class="pagewrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <aside>
+                  {% block aside %}
+
+                  {% endblock %}
+                </aside>
+            </div>
+            <div class="col-md-9">
+              {% block content %}
+              {% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block script %} {% endblock %}

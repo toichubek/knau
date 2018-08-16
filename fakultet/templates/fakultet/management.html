@@ -1,0 +1,42 @@
+{%extends "glavnaya/fakultet.html" %}
+{% load i18n %}
+
+{% block head %}
+<link rel="stylesheet" href="static/magnific-popup.css">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Руководство"  %}</h3></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="team">
+                <hr>
+                {% for person in manager %}
+                <div class="media">
+                    <div class="media-left news-img">
+                        <a href={{person.image.url}}>
+                            <img class="media-object" src={{person.image.url}} alt={{person.name|truncatewords_html:3}}>
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{person.name}}</h4>
+                        {% if LANGUAGE_CODE == 'kg'  %}
+                        <p>{{person.place_kg}}   </p>
+                        {% else %}
+                        <p>{{person.place}}   </p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="static/jquery.magnific-popup.min.js"></script>
+<script src="static/js.js"></script>
+{% endblock %}

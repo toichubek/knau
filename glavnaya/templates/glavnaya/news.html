@@ -1,0 +1,106 @@
+{%extends "glavnaya/fakultet.html" %}
+                  {% load i18n %}
+
+ {% block bodyheader %}
+
+ {% endblock %}
+
+{% block aside %}
+<div class="col-md-3"></div>
+
+            <div class="col-md-7">
+
+<div class="item">
+      <a href="fakultet/istoria.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "История"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="fakultet/management.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Руководство"  %}</h5></div>
+      </a>
+     </div>
+<div class="item">
+      <a href="fakultet/team.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Структура"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="fakultet/departments.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Кафедры"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="fakultet/sotrudnik.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Сотрудники"  %}</h5></div>
+      </a>
+  </div>
+
+<div class="item">
+      <a target="_blank"  href="http://avn.knau.kg/ReportServer/Pages/ReportViewer.aspx?%2fVUZ%2fs_uch_plan_spets_veterenarnyi&rs:Command=Render" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Учебные планы"  %}</h5></div>
+      </a>
+  </div>
+
+<div class="item">
+      <a href="news/" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Новости"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="fakultet/gallery.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Галерея"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="/students/library/" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Библиотека"  %}</h5></div>
+      </a>
+  </div>
+<div class="item">
+      <a href="contacts.html" class="box small-box">
+          <div class="inner-caption"><h5 class="middle text-center">{% trans "Контакты"  %}</h5></div>
+      </a>
+  </div>
+
+            </div>
+
+{% endblock %}
+{% block content %}
+<div class="content">
+  <div class="headline"><h3>{% trans "Новости"  %}</h3></div>
+    <hr>
+  {%  for i in news_all %}
+  <div class="news-item">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="news-img">
+          <a href="{% url 'new' i.id %}"> <img src={{i.image.url}} alt={{i.title|truncatewords_html:3}}></a>
+         </div>
+      </div>
+          <div class="col-md-8">
+              <div class="news-list">
+                  {% if LANGUAGE_CODE == 'kg'  %}
+                    <h4><a href="{% url 'new' i.id %}" class="title-news">{{i.title_kg}}</a></h4>
+                     <div class="news-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{ i.publish_now}}</div>
+                      <div class="preview-text">
+                        <p>{{i.preview_kg|truncatechars_html:150}}</p>
+                          </div>
+                  {% else %}
+                    <h4><a href="{% url 'new' i.id %}" class="title-news">{{i.title}}</a></h4>
+                     <div class="news-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{ i.publish_now}}</div>
+                      <div class="preview-text">
+                        <p>{{i.preview|truncatechars_html:150}}</p>
+                          </div>
+                  {% endif %}
+
+                          <div class="news-more text-right">
+                              <a href="{% url 'new' i.id %}">{% trans "Подробнее..."  %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  {% endfor %}
+</div>
+{% endblock %}

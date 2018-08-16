@@ -1,0 +1,48 @@
+{%extends "glavnaya/index.html" %}
+{% load i18n %}
+
+{% block aside %}
+{% load i18n %}
+{% for item in silka_list %}
+<div class="item">
+    <a href="{{  item.url  }}" {% if item.new_tab %} target="_blank" {% endif %} class="box small-box">
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <div class="inner-caption"><h5 class="middle text-center">{{  item.title_kg }}</h5></div>
+        {% else %}
+        <div class="inner-caption"><h5 class="middle text-center">{{  item.title }}</h5></div>
+        {% endif %}
+    </a>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="headline"><h3>{% trans "Вопросы и ответы"  %}</h3></div>
+    <hr>
+    {% for faq in faqs %}
+    <div class="faq">
+        {% if LANGUAGE_CODE == 'kg'  %}
+        <div><a href="" data-toggle="collapse" class="info">{{ faq.question_kg}}</a>
+            <div id="collapse" class="collapse in">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>{{faq.answer_kg|safe|linebreaks}}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>                      {% else %}
+        <div><a href="" data-toggle="collapse" class="info">{{ faq.question}}</a>
+            <div id="collapse" class="collapse in">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>{{faq.answer|safe|linebreaks}}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,178 @@
+﻿{% load static i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block meta %} {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}   {% endblock %}</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="static/style2.css">
+    <link rel="stylesheet" type="text/css" href="static/media.css">
+    <link rel="shortcut icon" href="https://www.edu24.kg/uploads/logos/6618917362556b96c4b9aedf4b3fd7877c529419.png" type="img/png">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="static/font-awesome.min.css"-->
+    {% block head %}
+    {% endblock %}
+</head>
+<body data-spy="spyscroll" data-target=".navbar-default">
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo-wrap">
+                        <a class="logo" target="_blank" href="http://knau.kg/ru/"><img src="static/logo-agro.png" alt="логотип КНАУ им. К.И.Скрябина"></a>
+                        <a class="logo" href="#"><img src="static/logotip.png" alt="vet fak"></a>
+                    </div>
+                    <div class="title">
+                        <h1> {% trans "Факультет ветеринарной медицины и биотехнологии КНАУ им. К.И.Скрябина"  %}</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contacts">
+                        {%  for address in ADDRESS %}
+                        <a href="mailto:{{ address.email }}" title="{{ address.email }}"><i class="fa fa-envelope" aria-hidden="true"></i>{{ address.email }}</a>
+                        <a href="tel:{{ address.telephone }}" title="{{ address.telephone }}"><i class="fa fa-phone-square" aria-hidden="true"></i>{{ address.telephone }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <ul class="lang">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <li class="active"  >     <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                            <input name="language" type="hidden" value="ru" />
+                            <input class="active" type="submit" value="RU" />
+                        </form>
+                        </li>
+
+                        <li>  <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                            <input name="language" type="hidden" value="kg" />
+                            <input type="submit" value="KG" />
+                        </form>
+                        </li>
+
+                    </ul>
+                    <ul class="social">
+                        <a href="https://ok.ru/profile/583075853110" target="_blank"><i class="fa fa-odnoklassniki-square" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/knaukau/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/channel/UCeseF_El-ZE0KNmxfFgTozA" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <ul>
+            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="row">
+
+                    <ul class="nav navbar-nav">
+                        <li class="{{ video_url }} {{ vet_url }}">
+                            <a href="{% url 'videos' %}">{% trans "Ветеринария"  %}</a></li>
+                        <li class="{{ departments_url }} {{ team_url }} {{sotrudnik_url }} {{ istoria_url }} {{ department_url }} {{ management_url }} {{ gallery_url }} {{ uch_plan_url }}">
+                            <a href="{% url 'departments' %}">{% trans "О факультете"  %}</a>    </li>
+                        <li>  <!--div class="btn-group navbar-btn"-->
+                            <button data-toggle="dropdown" class="btn btn-primary  dropdown-toggle">
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'istoria' %}">{% trans "История"  %}</a></li>
+                                <li><a href="{% url 'management' %}">{% trans "Руководство"  %} </a></li>
+                                <li><a href="{% url 'team' %}">{% trans "Структура"  %}</a></li>
+                                <li><a href="{% url 'departments' %}">{% trans "Кафедры"  %} </a></li>
+                                <li><a href="{% url 'sotrudnik' %}">{% trans "Сотрудники"  %}</a></li>
+                                <li><a href="{% url 'uch_plan' %}">{% trans "Учебный план"  %}</a></li>
+                                <li><a href="{% url 'news' %}"> {% trans "Новости"  %} </a></li>
+                                <li><a href="{% url 'gallery' %}"> {% trans "Галерея"  %} </a></li>
+                                <li><a href="http://185.29.184.122/elibrary" target="_blank">{% trans "Библиотека"  %}</a></li>
+                                <li><a href="{% url 'contacts' %}">{% trans "Контакты"  %}</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="{{ news_url}} {{ new_url }}" >
+                            <a href="{% url 'news' %}">{% trans "Новости"  %}</a></li>
+                        <li class="{{ doc_students_url }} {{ students_url }}">
+                            <a href="{% url 'doc_students' %}">{% trans "Студент"  %}</a></li>
+                        <li class="{{ abiturents_url }} {{ documents_url }} {{ abit_url }}" >
+                            <a href="{% url 'abiturents' %}">{% trans "Абитуриент"  %} </a> </li>
+                        <li>
+                            <a href="http://185.29.184.122/elibrary" target="_blank">{% trans "Библиотека"  %}</a></li>
+                        <li class="{{ faq_url }}" >
+                            <a href="{% url 'faq' %}">{% trans "Вопрос-Ответ"  %}</a></li>
+                        <li class="{{ contacts_url }}" >
+                            <a href="{% url 'contacts' %}">{% trans "Контакты"  %}</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    {% block header %}{% endblock %}
+</header>
+{% block bodyheader %}{% endblock %}
+
+
+{% block body %}
+{% endblock %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            {%  for address in ADDRESS %}
+            <div class="col-sm-12 col-md-3">
+                <div class="wrap-contacts">
+                    {% if LANGUAGE_CODE == 'kg'  %}
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ address.gorod_kg}}, {{ address.strana_kg }}, {{ address.ulitsa_kg }} </p>
+                    {% else %}
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ address.gorod}}, {{ address.strana }}, {{ address.ulitsa }} </p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="wrap-contacts">
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>{{ address.email }}</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="wrap-contacts">
+                    <p><i class="fa fa-phone-square" aria-hidden="true"></i>{{ address.telephone }}</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="text-right">
+                    <a href="https://www.facebook.com/knaukau/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="https://ok.ru/profile/583075853110" target="_blank"><i class="fa fa-odnoklassniki-square" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UCeseF_El-ZE0KNmxfFgTozA" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="copy text-center">
+        <p><i class="fa fa-copyright" aria-hidden="true"></i>{% trans "Факультет ветеринарной медицины и биотехнологии КНАУ им. К.И.Скрябина"  %}</p>
+    </div>
+</footer>
+
+<script src="static/jquery.min.js"></script>
+<script src="static/bootstrap.min.js"></script>
+{% block script %} {% endblock %}
+</body>
+</html>
