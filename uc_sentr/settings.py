@@ -11,9 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-#################   VENV MYVENV ##################
-# E:\books\site\myenv\myvenv\Scripts\activate.bat
-##################################################
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,10 +19,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#*fge=@6&g2oyqu3=#%$i9_pnn-76t1r(d2(g8a3(^$ru9=az6'
+SECRET_KEY = 'my_secret_key_here'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
@@ -44,15 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'glavnaya',
-    # 'fakultet',
     'bootstrap4',
     'ckeditor',
     'ckeditor_uploader',
     #'menu',
-    #'django_activeurl',
-    # 'translation_manager',
-    # 'modeltranslation',
     ]
 
 MIDDLEWARE = [
@@ -124,23 +116,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
-
-
-
 from django.utils.translation import ugettext_lazy as _
-
 LANGUAGES = (
     ('ru', _('Russian')),
     ('kg', _('Kyrgyz')),
 )
-
 LANGUAGE_CODE = 'ru'
-# MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
-# MODELTRANSLATION_FALLBACK_LANGUAGES = ('ru', 'kg')
-
 
 TIME_ZONE = 'UTC'
 
@@ -155,8 +138,12 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+BOOTSTRAP4= {
+        'include_jquery': True,
+        }
 
 STATIC_URL = '/static/'
+MEDIA_URL = "/media/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -164,23 +151,12 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
-
-MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
-
-BOOTSTRAP4= {
-        'include_jquery': True,
-        }
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_JQUERY_URL = os.path.join(STATIC_URL, 'jquery.min.js')
-#CKEDITOR_CONFIGS = {
- #   'default': {
-  #      'width': '100%',
-   # },}
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-
     },
 }
