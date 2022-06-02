@@ -27,7 +27,7 @@ djangocms-admin-style==1.2.8
 djangocms-text-ckeditor==3.6.0
 djangorestframework==3.8.2
 Gallery==0.1.0
-html5lib==0.9999999
+html5lib==0.99999999
 idna==2.7
 lxml==4.2.3
 markdownify==0.4.1
